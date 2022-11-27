@@ -31,7 +31,7 @@ nav ul{
 
 .presentation {
     width: 200px;
-    height: 250px;
+    height: 33%;
     padding: 20px;
     background-color: rgb(236, 145, 145);
     text-overflow: ellipsis;
@@ -91,17 +91,125 @@ nav ul{
     padding: 0 20px;
 }
 
-.container{
-    margin-top: 80px;
+.projet_1{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
+    flex-wrap: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    gap: 30px;
 }
 
-.container > div{
+.partie > div{
     background-color: rgb(251, 202, 202);
     width: 100%;
-    height: 300px;
+    height: 20%;
+}
+
+section{
+    background-color: rgb(251, 202, 202);
+    width: 100%;
+    height: 20%px;
+}
+
+.projet_2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    gap: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    gap: 30px;
+}
+
+.rotation {
+    animation: 3s infinite linear luffy;
+    width: 20%;
+}
+
+@keyframes luffy {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes onepiece {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.fun{
+    display: flex;
+    flex-wrap: row;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.rep{
+    animation: 7s infinite linear onepiece;
+}
+
+.cube{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(231, 187, 196);
+    margin-bottom: 30px;
+    transition: 1s;
+    transition-delay: 1s;
+}
+.cube{
+    transition-timing-function: ease-in-out;
+}
+.cube2{
+    transition-timing-function: ease-out;
+}
+
+main:hover > .cube{
+    transform: translateX(200px);
+}
+
+@media screen and (max-width: 520px) {
+
+    nav{
+        flex-direction: column;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    ul{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .projet_1{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .grid{
+        grid-template-columns: 1fr;
+    }
 }
 
